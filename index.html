@@ -4,6 +4,102 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Antonio Cruel - 75203</title>
+    <style>
+      :root {
+        --primary: #007bff;
+        --bg: #f0f2f5;
+        --card-bg: #ffffff;
+      }
+
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background-color: var(--bg);
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      #button-container {
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--primary);
+        color: white;
+        margin: 5px;
+        transition: opacity 0.2s;
+      }
+
+      .btn:hover {
+        opacity: 0.8;
+      }
+
+      /* Filter Sections */
+      .filter-section {
+        max-width: 600px;
+        margin: 0 auto 20px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: none; /* Hidden until API is selected */
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        text-align: left;
+      }
+
+      input,
+      select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-top: 5px;
+      }
+
+      /* Grid Layout Requirement */
+      #remote-data-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .card {
+        background: var(--card-bg);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card img {
+        max-width: 100px;
+        height: auto;
+      }
+
+      .error {
+        color: #d93025;
+        grid-column: 1/-1;
+      }
+    </style>
   </head>
   <body>
     <h1>Global Data Explorer</h1>
